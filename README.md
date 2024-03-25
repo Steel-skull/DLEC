@@ -1,4 +1,4 @@
-## REPO IS A WORK IN PROGRESS
+# REPO IS A WORK IN PROGRESS
 
 Currently, Only the Colab works as I build out the full Repo it is in the ./colab folder
 
@@ -6,7 +6,7 @@ Currently, Only the Colab works as I build out the full Repo it is in the ./cola
 
 The DLEC (Distributive Layer Expansion Curve) methodology offers a novel approach to improving neural network models by focusing on the strategic duplication of certain effective layers. Developed with the aim of enhancing model performance, DLEC carefully identifies and amplifies the impact of key layers within the model's architecture.
 
-### Below is the overview:
+## Below is the overview:
 # Overview Setting Up: 
 First, the script ensures all necessary components are in place, from libraries to the model and dataset.
 # Database for Activations: 
@@ -18,18 +18,19 @@ A configuration is then created, guiding how the model should incorporate duplic
 #Reconfiguring and Running the Model: 
 Finally, the model is adjusted according to DLEC's insights, focusing enhancement on the identified layers.
 
-### Key Features: 
+## Key Features: 
 # Selective Layer Duplication: 
 DLEC doesn't just add more layers; it doubles down on the ones that really matter. This methodical selection ensures we're making the most of the model's capabilities without wasteful expansion.
-# Smart Resource Management: By honing in on specific areas for improvement, DLEC aims to make better use of computational and memory resources, promoting more efficient learning without adding undue complexity to the model.
+# Smart Resource Management: 
+By honing in on specific areas for improvement, DLEC aims to make better use of computational and memory resources, promoting more efficient learning without adding undue complexity to the model.
 
----
+
 This approach is about making informed, strategic enhancements to model architecture, prioritizing efficiency and effectiveness in utilizing neural network capabilities.
----
+
 
 First Successful Model:
 
-2.78-> 3.25
+2.78-> 3.25 a ~16% increase in size
 
 https://huggingface.co/TheSkullery/phi-2-DLEC
 
