@@ -55,12 +55,71 @@ Specify the path where you want to store the SQLite database file for the activa
 --dbpath /path/to/activations.db
 ```
 
-# First Successful Model:
+# Information Loss:
+It is common to observe a loss of intelligence when merging models, especially with Passthrough merging, which typically results in a loss of around 3 points per billion parameters duplicated, assuming the merge is done correctly. If the merge is suboptimal, the loss can be much larger, ranging from 3-8 points or more per billion parameters duplicated. However, with DLEC, I was able to increase Phi-2 from 2.78b to 3.25b with a minimal loss of around 0.44 points on average.
 
-2.78-> 3.25 a ~16% increase in size
+DLEC Expanded Model:
+[TheSkullery/phi-2-DLEC](https://huggingface.co/TheSkullery/phi-2-DLEC)
+2.78 -> 3.25, a ~17% increase in size
+```
+Metric -> Value
+Avg. 46.72
+AGIEval 29.64
+GPT4All 69.48
+TruthfulQA 50.29
+```
 
-https://huggingface.co/TheSkullery/phi-2-DLEC
+Original Model:
+[abacaj/phi-2-super](https://huggingface.co/abacaj/phi-2-super))
+```
+Metric -> Value
+Avg. 47.16
+AGIEval 31.95
+GPT4All 70.81
+TruthfulQA 48.39
+```
 
-As you know there is a usual loss of intelligence with model mergers, especially with Passthrough merging on the par of 3ish points per billion duped, IF you get the right merge, if not your looking at a much larger loss (anywhere from 3-8 points per billion duped), With DLEC, I was able to increase Phi-2 from 2.78b -> 3.25b with around a single point of loss.
+Loss or Increase:
+Avg. -0.44
+AGIEval -2.31
+GPT4All -1.33
+TruthfulQA +1.90
 
+Example of loss:
+[Steelskull/Etheria-55b-v0.1](https://huggingface.co/Steelskull/Etheria-55b-v0.1)
+```
+Metric -> Value
+Avg. 64.69
+AI2 Reasoning Challenge 65.10
+HellaSwag 81.93
+MMLU 73.66
+TruthfulQA 56.16
+Winogrande 76.09
+GSM8k 35.18
+```
+
+[Yi-34B-200K-DARE-megamerge-v8](https://huggingface.co/brucethemoose/Yi-34B-200K-DARE-megamerge-v8)
+```
+Metric -> Value
+Avg. 72.56
+AI2 Reasoning Challenge 67.75
+HellaSwag 86.06
+MMLU 77.03
+TruthfulQA 56.31
+Winogrande 82.79
+GSM8k 65.43
+```
+
+Merge Loss (Yi-34B-200K-DARE-megamerge-v8 compared to Etheria-55b-v0.1):
+Avg. -7.87
+AI2 Reasoning Challenge -2.65
+HellaSwag -4.13
+MMLU -3.37
+TruthfulQA +0.15
+Winogrande -6.70
+GSM8k -30.25
+
+In the example comparing Etheria-55b-v0.1 and Yi-34B-200K-DARE-megamerge-v8, there is a significant decrease in performance across all metrics, with the average score decreasing by 7.87 points. The most notable is in the GSM8k benchmark, where Yi-34B-200K-DARE-megamerge-v8 outperforms Etheria-55b-v0.1 by 30.25 points.
+
+---
 This method is still in active development, and I am currently tweaking the algorithm to improve the layer selection process, I am also working on a single layer duping script as merge kit does not currently support this and I am being forced to merge layers that are unneeded and its degrading performance.
