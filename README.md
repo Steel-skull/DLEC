@@ -24,11 +24,13 @@ DLEC doesn't just add more layers; it doubles down on the ones that really matte
 # Smart Resource Management: 
 By honing in on specific areas for improvement, DLEC aims to make better use of computational and memory resources, promoting more efficient learning without adding undue complexity to the model.
 
+## Algorithm
+
+![image](https://github.com/Steel-skull/DLEC/assets/79706171/53c19a1a-13d4-4601-b593-cae263a7f9fa)
 
 This approach is about making informed, strategic enhancements to model architecture, prioritizing efficiency and effectiveness in utilizing neural network capabilities.
 
-
-First Successful Model:
+# First Successful Model:
 
 2.78-> 3.25 a ~16% increase in size
 
