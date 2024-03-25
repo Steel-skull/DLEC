@@ -27,10 +27,6 @@ Configuring DLEC:
 
 A configuration is then created, guiding how the model should incorporate duplicates of these beneficial layers to boost effectiveness without unnecessarily increasing complexity.
 
-Reconfiguring and Running the Model: 
-
-Finally, the model is adjusted according to DLEC's insights, focusing enhancement on the identified layers.
-
 # Key Features: 
 Selective Layer Duplication: 
 
