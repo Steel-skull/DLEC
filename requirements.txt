@@ -1,0 +1,11 @@
+accelerate 
+bitsandbytes 
+hf-transfer
+torch 
+transformers 
+datasets 
+numpy 
+scikit-learn 
+matplotlib 
+pyyaml 
+huggingface-cli
