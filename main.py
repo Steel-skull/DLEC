@@ -33,17 +33,17 @@ def main():
     # Initialize and use ActivationAnalyzer to process the dataset and record activations
     analyzer = ActivationAnalyzer(model, tokenizer, args.dbpath)
     logger.info("Processing dataset and recording activations...")
-    analyzer.process_datasthese steps are described conceptually
-    logger.info("Analyzing activations  identify beneficial layers...")
-    # beneficial_layers = , 6, 10]  # Example beneficial layers
-    # logger.info(f"Beneficial lers identified: {beneficial_layers}")
+    analyzer.process_dataset_and_record_activations(dataset)
 
-    # logger.info("Generating model conguration based on beneficial layers...")
-    # configurator = Modelnfigurator(beneficial_layers, args.mode
-    l)
-  # config = configurator.generate_config()
-    # configurator.savconfig_to_yaml(config, 'model_config.yaml')
-    # loggct's specifics and need to be implementd accordingly.
+    logger.info("Analyzing activations to identify beneficial layers...")
+    beneficial_layers = analyzer.analyze_activations()
+    logger.info(f"Beneficial layers identified: {beneficial_layers}")
+
+    logger.info("Generating model configuration based on beneficial layers...")
+    configurator = ModelConfigurator(beneficial_layers, args.model)
+    config = configurator.generate_config()
+    configurator.save_config_to_yaml(config, 'model_config.yaml')
+    logger.info("Model configuration generated and saved.")
 
 if __name__ == "__main__":
     main()
