@@ -1,6 +1,8 @@
 # REPO IS A WORK IN PROGRESS
 
-Currently, Only the Colab works as I build out the full Repo it is in the ./colab folder
+the Colab fully works, it is in the ./colab folder
+
+I am rewriting the code to make it a usable app it "should" be funtional
 
 ### DLEC (Distributive Layer Expansion Curve)
 
@@ -29,6 +31,29 @@ By honing in on specific areas for improvement, DLEC aims to make better use of 
 ![image](https://github.com/Steel-skull/DLEC/assets/79706171/53c19a1a-13d4-4601-b593-cae263a7f9fa)
 
 This approach is about making informed, strategic enhancements to model architecture, prioritizing efficiency and effectiveness in utilizing neural network capabilities.
+
+## How-To
+```
+python main.py --model <model_name> --dataset <dataset_name> [--dbpath <database_path>]
+```
+
+--model (required): 
+Specify the name or identifier of the model you want to use for activation analysis. This should be a valid model identifier from the Hugging Face Models Hub. For example:
+```
+--model google/gemma-2b
+```
+
+--dataset (required): 
+Specify the name or identifier of the dataset you want to use for activation analysis. This should be a valid dataset identifier from the Hugging Face Datasets Hub. For example:
+```
+--dataset wikimedia/wikipedia
+```
+
+--dbpath (optional): 
+Specify the path where you want to store the SQLite database file for the activation analysis results. If not provided, it defaults to ./activations.db in the current directory. For example:
+```
+--dbpath /path/to/activations.db
+```
 
 # First Successful Model:
 
