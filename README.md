@@ -4,7 +4,7 @@ the Colab fully works, it is in the ./colab folder
 
 I am rewriting the code to make it a usable app it "should" be funtional
 
-## 3 DLEC (Distributive Layer Expansion Curve)
+### DLEC (Distributive Layer Expansion Curve)
 
 The DLEC (Distributive Layer Expansion Curve) methodology offers a novel approach to improving neural network models by focusing on the strategic duplication of certain effective layers. Developed with the aim of enhancing model performance, DLEC carefully identifies and amplifies the impact of key layers within the model's architecture.
 
